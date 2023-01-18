@@ -1,11 +1,13 @@
-import React from 'react'
-import AppRouter from './Router/AppRouter'
+import React from 'react';
+import { AuthProvider } from './auth/context/AuthProvider';
+import AppRouter from './Router/AppRouter';
 
-const HeroesApp = props => {
+const HeroesApp = (props) => {
   return (
-    <AppRouter/>
-  )
-}
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
+  );
+};
 
-
-export default HeroesApp
+export default HeroesApp;
